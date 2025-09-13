@@ -143,7 +143,3 @@ This project is licensed under the MIT License.
 
 ```
 
----
-
-👉 Do you want me to also include **screenshots of API usage with curl examples** (like `curl -X POST http://localhost:3000/new -d "username=Adnan"`) inside the README? That would make it more practical for others.
-```
