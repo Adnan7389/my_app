@@ -2,22 +2,7 @@
 const db = require("../db/queries");
 
 async function getUsernames(req, res) {
-  try {
-    const search = req.query.search || null;
-    const usernames = await db.getAllUsernames(search);
-    
-    console.log("Usernames:", usernames);
-    if (usernames.length === 0) {
-     return res.send(`<p> No usernames found in the database.</p>`);
-    }
-
-    res.send(
-      "Usernames: " + usernames.map(user => user.username).join(", ")
-    );
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error fetching users");
-  }
+  res.render("index", { user: req.user });
 }
 
 async function createUsernameGet(req, res) {
